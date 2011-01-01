@@ -68,6 +68,8 @@ public class SewerBlockListener extends BlockListener {
 		Block hut1 = hut0.getRelative(BlockFace.NORTH, 2);
 		int h1 = hut.hut1(hut1, m, bf1);
 
+
+		
 		Block setter0 = w1.getRelative(BlockFace.WEST, t5+8);
 		Block setter2 = setter0.getRelative(BlockFace.NORTH, 1);
 		Block pit1 = setter2.getRelative(BlockFace.UP, 5);
@@ -76,6 +78,10 @@ public class SewerBlockListener extends BlockListener {
 		Block setter1 = w1.getRelative(BlockFace.WEST, t5);
 		Block w2 = setter1.getRelative(BlockFace.NORTH, 1);
 		int t6 = tun.nstStraight(w2, m, bf1);
+		
+		Block n1 = w2.getRelative(BlockFace.WEST, 5);
+		Block n3 = n1.getRelative(BlockFace.SOUTH, 5);
+		int t13 = tun. nstStraight(n3, m, bf2);
 		
 		Block setter3 = setter2.getRelative(BlockFace.SOUTH, 3);
 		//Block w3 = setter3.getRelative(BlockFace.SOUTH, 3);
@@ -94,7 +100,7 @@ public class SewerBlockListener extends BlockListener {
 		int t9 = tun.nstStraight(w4, m, bf2);
 		
 		Block hut2 = w4.getRelative(BlockFace.SOUTH, t9);
-		Block hut3 = hut2.getRelative(BlockFace.NORTH, 2);
+		Block hut3 = hut2.getRelative(BlockFace.NORTH, 3);
 		int h2 = hut.hut1(hut3, m, bf2);
 		
 //		Block w7 = w6.getRelative(BlockFace.WEST, t10);
@@ -112,7 +118,7 @@ public class SewerBlockListener extends BlockListener {
 		
 		Block w10 = setter3.getRelative(BlockFace.WEST, t7+6);
 		Block w11 = w10.getRelative(BlockFace.NORTH, t9);
-		int t13 = tun.nstStraight(w11, m, bf1);
+		int t14 = tun.nstStraight(w11, m, bf1);
 		
 //		man.man1(set, m , bf);
 		
