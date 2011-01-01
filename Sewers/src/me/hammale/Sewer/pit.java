@@ -508,122 +508,6 @@ public class pit {
 				Block clr611111 = set3.getRelative(BlockFace.DOWN, 6);
 				Block clr711111 = set3.getRelative(BlockFace.DOWN, 7);
 				
-				if (x == 1 || x+1 == a){				
-				clr1.setType(Material.SMOOTH_BRICK);
-				clr10.setType(Material.SMOOTH_BRICK);
-				clr11.setType(Material.SMOOTH_BRICK);
-				clr111.setType(Material.SMOOTH_BRICK);
-				clr1111.setType(Material.SMOOTH_BRICK);
-				clr11111.setType(Material.SMOOTH_BRICK);
-				clr111111.setType(Material.SMOOTH_BRICK);
-				
-				clr2.setType(Material.SMOOTH_BRICK);
-				clr20.setType(Material.SMOOTH_BRICK);
-				clr21.setType(Material.SMOOTH_BRICK);
-				clr211.setType(Material.SMOOTH_BRICK);
-				clr2111.setType(Material.SMOOTH_BRICK);
-				clr21111.setType(Material.SMOOTH_BRICK);
-				clr211111.setType(Material.SMOOTH_BRICK);
-				
-				clr3.setType(Material.SMOOTH_BRICK);
-				clr30.setType(Material.SMOOTH_BRICK);
-				clr31.setType(Material.SMOOTH_BRICK);
-				clr311.setType(Material.SMOOTH_BRICK);
-				clr3111.setType(Material.SMOOTH_BRICK);
-				clr31111.setType(Material.SMOOTH_BRICK);
-				clr311111.setType(Material.SMOOTH_BRICK);
-				
-				clr4.setType(Material.SMOOTH_BRICK);
-				clr40.setType(Material.SMOOTH_BRICK);
-				clr41.setType(Material.SMOOTH_BRICK);
-				clr411.setType(Material.SMOOTH_BRICK);
-				clr4111.setType(Material.SMOOTH_BRICK);
-				clr41111.setType(Material.SMOOTH_BRICK);
-				clr411111.setType(Material.SMOOTH_BRICK);
-				
-				clr5.setType(Material.SMOOTH_BRICK);
-				clr50.setType(Material.SMOOTH_BRICK);
-				clr51.setType(Material.SMOOTH_BRICK);
-				clr511.setType(Material.SMOOTH_BRICK);
-				clr5111.setType(Material.SMOOTH_BRICK);
-				clr51111.setType(Material.SMOOTH_BRICK);
-				clr511111.setType(Material.SMOOTH_BRICK);
-				clr5111111.setType(Material.SMOOTH_BRICK);
-				
-				clr6.setType(Material.SMOOTH_BRICK);
-				clr60.setType(Material.SMOOTH_BRICK);
-				clr61.setType(Material.SMOOTH_BRICK);
-				clr611.setType(Material.SMOOTH_BRICK);
-				clr6111.setType(Material.SMOOTH_BRICK);
-				clr61111.setType(Material.SMOOTH_BRICK);
-				clr611111.setType(Material.SMOOTH_BRICK);
-				
-				clr7.setType(Material.SMOOTH_BRICK);
-				clr70.setType(Material.SMOOTH_BRICK);
-				clr71.setType(Material.SMOOTH_BRICK);
-				clr711.setType(Material.SMOOTH_BRICK);
-				clr7111.setType(Material.SMOOTH_BRICK);
-				clr71111.setType(Material.SMOOTH_BRICK);
-				clr711111.setType(Material.SMOOTH_BRICK);
-				}else {
-					clr1.setType(Material.AIR);
-					clr10.setType(Material.AIR);
-					clr11.setType(Material.AIR);
-					clr111.setType(Material.AIR);
-					clr1111.setType(Material.AIR);
-					clr11111.setType(Material.AIR);
-					clr111111.setType(Material.AIR);
-					
-					clr2.setType(Material.AIR);
-					clr20.setType(Material.AIR);
-					clr21.setType(Material.AIR);
-					clr211.setType(Material.AIR);
-					clr2111.setType(Material.AIR);
-					clr21111.setType(Material.AIR);
-					clr211111.setType(Material.AIR);
-					
-					clr3.setType(Material.AIR);
-					clr30.setType(Material.AIR);
-					clr31.setType(Material.AIR);
-					clr311.setType(Material.AIR);
-					clr3111.setType(Material.AIR);
-					clr31111.setType(Material.AIR);
-					clr311111.setType(Material.AIR);
-					
-					clr4.setType(Material.AIR);
-					clr40.setType(Material.AIR);
-					clr41.setType(Material.AIR);
-					clr411.setType(Material.AIR);
-					clr4111.setType(Material.AIR);
-					clr41111.setType(Material.AIR);
-					clr411111.setType(Material.AIR);
-					
-					clr5.setType(Material.AIR);
-					clr50.setType(Material.AIR);
-					clr51.setType(Material.AIR);
-					clr511.setType(Material.AIR);
-					clr5111.setType(Material.AIR);
-					clr51111.setType(Material.AIR);
-					clr511111.setType(Material.AIR);
-					clr5111111.setType(Material.AIR);
-					
-					clr6.setType(Material.WATER);
-					clr60.setType(Material.WATER);
-					clr61.setType(Material.WATER);
-					clr611.setType(Material.WATER);
-					clr6111.setType(Material.WATER);
-					clr61111.setType(Material.WATER);
-					clr611111.setType(Material.WATER);
-					
-					clr7.setType(Material.WATER);
-					clr70.setType(Material.WATER);
-					clr71.setType(Material.WATER);
-					clr711.setType(Material.WATER);
-					clr7111.setType(Material.WATER);
-					clr71111.setType(Material.WATER);
-					clr711111.setType(Material.WATER);
-				}
-									
 				Byte other = (byte) (Math.random() * 3);
 				set3.setType(m);
 				set3.setData(other);
@@ -700,14 +584,16 @@ public class pit {
 				set81.setData(ran61);
 				
 				//
-				Block set9 = set81.getRelative(BlockFace.SOUTH, 1);
-				Block set10 = set9.getRelative(BlockFace.SOUTH, 1);
-				Block set11 = set10.getRelative(BlockFace.SOUTH, 1);
-				Block set12 = set11.getRelative(BlockFace.SOUTH, 1);
-				Block set91 = set12.getRelative(BlockFace.SOUTH, 1);
-				Block set101 = set91.getRelative(BlockFace.SOUTH, 1);
-				Block set111 = set101.getRelative(BlockFace.SOUTH, 1);
-				Block set121 = set111.getRelative(BlockFace.SOUTH, 1);
+				Block set9 = set81.getRelative(BlockFace.NORTH, 1);
+				Block set10 = set9.getRelative(BlockFace.NORTH, 1);
+				Block set11 = set10.getRelative(BlockFace.NORTH, 1);
+				Block set12 = set11.getRelative(BlockFace.NORTH, 1);
+				Block set91 = set12.getRelative(BlockFace.NORTH, 1);
+				Block set101 = set91.getRelative(BlockFace.NORTH, 1);
+				Block set111 = set101.getRelative(BlockFace.NORTH, 1);
+				Block set121 = set111.getRelative(BlockFace.NORTH, 1);
+				Block set122 = set1.getRelative(BlockFace.NORTH, 2);
+				//Block set122 = set1222.getRelative(BlockFace.UP, 1);
 				Byte ran11 = (byte) (Math.random() * 3);
 				Byte ran8 = (byte) (Math.random() * 3);
 				Byte ran9 = (byte) (Math.random() * 3);
@@ -732,6 +618,8 @@ public class pit {
 				set111.setData(ran111);
 				set121.setType(m);
 				set121.setData(ran121);
+				set122.setType(m);
+				set122.setData(ran1);
 				//
 				Block set13 = set121.getRelative(BlockFace.UP, 1);
 				Block set14 = set13.getRelative(BlockFace.UP, 1);
@@ -766,6 +654,199 @@ public class pit {
 				set20.setType(m);
 				set20.setData(ran20);
 				
+				if (x == 1){
+				clr1.setType(Material.SMOOTH_BRICK);
+				clr10.setType(Material.SMOOTH_BRICK);
+				clr11.setType(Material.SMOOTH_BRICK);
+				clr111.setType(Material.SMOOTH_BRICK);
+				clr1111.setType(Material.SMOOTH_BRICK);
+				clr11111.setType(Material.SMOOTH_BRICK);
+				clr111111.setType(Material.SMOOTH_BRICK);
+				
+				clr2.setType(Material.SMOOTH_BRICK);
+				clr20.setType(Material.SMOOTH_BRICK);
+				clr21.setType(Material.SMOOTH_BRICK);
+				clr211.setType(Material.SMOOTH_BRICK);
+				clr2111.setType(Material.SMOOTH_BRICK);
+				clr21111.setType(Material.SMOOTH_BRICK);
+				clr211111.setType(Material.SMOOTH_BRICK);
+				
+				clr3.setType(Material.SMOOTH_BRICK);
+				clr30.setType(Material.SMOOTH_BRICK);
+				clr31.setType(Material.SMOOTH_BRICK);
+				clr311.setType(Material.SMOOTH_BRICK);
+				clr3111.setType(Material.SMOOTH_BRICK);
+				clr31111.setType(Material.SMOOTH_BRICK);
+				clr311111.setType(Material.SMOOTH_BRICK);
+				
+				clr4.setType(Material.SMOOTH_BRICK);
+				clr40.setType(Material.SMOOTH_BRICK);
+				clr41.setType(Material.SMOOTH_BRICK);
+				clr411.setType(Material.SMOOTH_BRICK);
+				clr4111.setType(Material.SMOOTH_BRICK);
+				clr41111.setType(Material.SMOOTH_BRICK);
+				clr411111.setType(Material.SMOOTH_BRICK);
+				
+				int w = 1;
+				while (w < 8){
+					Block clearer = set122.getRelative(BlockFace.DOWN, w);
+					clearer.setType(Material.SMOOTH_BRICK);
+					w++;
+				}
+				
+				clr5.setType(Material.SMOOTH_BRICK);
+				clr50.setType(Material.SMOOTH_BRICK);
+				clr51.setType(Material.SMOOTH_BRICK);
+				clr511.setType(Material.SMOOTH_BRICK);
+				clr5111.setType(Material.SMOOTH_BRICK);
+				clr51111.setType(Material.SMOOTH_BRICK);
+				clr511111.setType(Material.SMOOTH_BRICK);
+				clr5111111.setType(Material.SMOOTH_BRICK);
+				
+				clr6.setType(Material.SMOOTH_BRICK);
+				clr60.setType(Material.SMOOTH_BRICK);
+				clr61.setType(Material.SMOOTH_BRICK);
+				clr611.setType(Material.SMOOTH_BRICK);
+				clr6111.setType(Material.SMOOTH_BRICK);
+				clr61111.setType(Material.SMOOTH_BRICK);
+				clr611111.setType(Material.SMOOTH_BRICK);
+				
+				clr7.setType(Material.SMOOTH_BRICK);
+				clr70.setType(Material.SMOOTH_BRICK);
+				clr71.setType(Material.SMOOTH_BRICK);
+				clr711.setType(Material.SMOOTH_BRICK);
+				clr7111.setType(Material.SMOOTH_BRICK);
+				clr71111.setType(Material.SMOOTH_BRICK);
+				clr711111.setType(Material.SMOOTH_BRICK);
+				}else if (x+1 == a){
+					clr1.setType(Material.IRON_FENCE);
+					clr10.setType(Material.IRON_FENCE);
+					clr11.setType(Material.IRON_FENCE);
+					clr111.setType(Material.IRON_FENCE);
+					clr1111.setType(Material.IRON_FENCE);
+					clr11111.setType(Material.IRON_FENCE);
+					clr111111.setType(Material.IRON_FENCE);
+					
+					clr2.setType(Material.IRON_FENCE);
+					clr20.setType(Material.IRON_FENCE);
+					clr21.setType(Material.IRON_FENCE);
+					clr211.setType(Material.IRON_FENCE);
+					clr2111.setType(Material.IRON_FENCE);
+					clr21111.setType(Material.IRON_FENCE);
+					clr211111.setType(Material.IRON_FENCE);
+					
+					clr3.setType(Material.IRON_FENCE);
+					clr30.setType(Material.IRON_FENCE);
+					clr31.setType(Material.IRON_FENCE);
+					clr311.setType(Material.IRON_FENCE);
+					clr3111.setType(Material.IRON_FENCE);
+					clr31111.setType(Material.IRON_FENCE);
+					clr311111.setType(Material.IRON_FENCE);
+					
+					clr4.setType(Material.IRON_FENCE);
+					clr40.setType(Material.IRON_FENCE);
+					clr41.setType(Material.IRON_FENCE);
+					clr411.setType(Material.IRON_FENCE);
+					clr4111.setType(Material.IRON_FENCE);
+					clr41111.setType(Material.IRON_FENCE);
+					clr411111.setType(Material.IRON_FENCE);
+					
+					int w = 1;
+					while (w < 8){
+						Block clearer = set122.getRelative(BlockFace.DOWN, w);
+						clearer.setType(Material.IRON_FENCE);
+						w++;
+					}
+					
+					clr5.setType(Material.IRON_FENCE);
+					clr50.setType(Material.IRON_FENCE);
+					clr51.setType(Material.IRON_FENCE);
+					clr511.setType(Material.IRON_FENCE);
+					clr5111.setType(Material.IRON_FENCE);
+					clr51111.setType(Material.IRON_FENCE);
+					clr511111.setType(Material.IRON_FENCE);
+					clr5111111.setType(Material.IRON_FENCE);
+					
+					clr6.setType(Material.IRON_FENCE);
+					clr60.setType(Material.IRON_FENCE);
+					clr61.setType(Material.IRON_FENCE);
+					clr611.setType(Material.IRON_FENCE);
+					clr6111.setType(Material.IRON_FENCE);
+					clr61111.setType(Material.IRON_FENCE);
+					clr611111.setType(Material.IRON_FENCE);
+					
+					clr7.setType(Material.IRON_FENCE);
+					clr70.setType(Material.IRON_FENCE);
+					clr71.setType(Material.IRON_FENCE);
+					clr711.setType(Material.IRON_FENCE);
+					clr7111.setType(Material.IRON_FENCE);
+					clr71111.setType(Material.IRON_FENCE);
+					clr711111.setType(Material.IRON_FENCE);
+					}else{
+					clr1.setType(Material.AIR);
+					clr10.setType(Material.AIR);
+					clr11.setType(Material.AIR);
+					clr111.setType(Material.AIR);
+					clr1111.setType(Material.AIR);
+					clr11111.setType(Material.AIR);
+					clr111111.setType(Material.AIR);
+					
+					clr2.setType(Material.AIR);
+					clr20.setType(Material.AIR);
+					clr21.setType(Material.AIR);
+					clr211.setType(Material.AIR);
+					clr2111.setType(Material.AIR);
+					clr21111.setType(Material.AIR);
+					clr211111.setType(Material.AIR);
+					
+					clr3.setType(Material.AIR);
+					clr30.setType(Material.AIR);
+					clr31.setType(Material.AIR);
+					clr311.setType(Material.AIR);
+					clr3111.setType(Material.AIR);
+					clr31111.setType(Material.AIR);
+					clr311111.setType(Material.AIR);
+					
+					clr4.setType(Material.AIR);
+					clr40.setType(Material.AIR);
+					clr41.setType(Material.AIR);
+					clr411.setType(Material.AIR);
+					clr4111.setType(Material.AIR);
+					clr41111.setType(Material.AIR);
+					clr411111.setType(Material.AIR);
+					
+					int w = 1;
+					while (w < 8){
+						Block clearer = set122.getRelative(BlockFace.DOWN, w);
+						clearer.setType(Material.AIR);
+						w++;
+					}
+					
+					clr5.setType(Material.AIR);
+					clr50.setType(Material.AIR);
+					clr51.setType(Material.AIR);
+					clr511.setType(Material.AIR);
+					clr5111.setType(Material.AIR);
+					clr51111.setType(Material.SMOOTH_BRICK);
+					clr511111.setType(Material.AIR);
+					clr5111111.setType(Material.SMOOTH_BRICK);
+					
+					clr6.setType(Material.WATER);
+					clr60.setType(Material.WATER);
+					clr61.setType(Material.WATER);
+					clr611.setType(Material.WATER);
+					clr6111.setType(Material.WATER);
+					clr61111.setType(Material.WATER);
+					clr611111.setType(Material.WATER);
+					
+					clr7.setType(Material.WATER);
+					clr70.setType(Material.WATER);
+					clr71.setType(Material.WATER);
+					clr711.setType(Material.WATER);
+					clr7111.setType(Material.WATER);
+					clr71111.setType(Material.WATER);
+					clr711111.setType(Material.WATER);
+				}
 				int spawn = (int) (Math.random() * 1);
 				World world = clr611.getWorld();
 				Location loc = clr611.getLocation();
