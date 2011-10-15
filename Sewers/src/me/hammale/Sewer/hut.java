@@ -122,16 +122,23 @@ public class hut {
 				Block clr10 = set12.getRelative(BlockFace.DOWN, 1);
 				Block clr11 = clr10.getRelative(BlockFace.DOWN, 1);
 				Block clr12 = clr11.getRelative(BlockFace.DOWN, 1);
+								
+				clr10.setType(Material.AIR);				
+				clr11.setType(Material.AIR);
+				if (x == 2) {
+					clr12.setTypeId(58);
+				}
 				
 				if (x == 5 || x == 1) {
+					if (x == 5) {
 					clr1.setType(Material.IRON_FENCE);
-					clr2.setType(Material.IRON_FENCE);
+					clr2.setType(Material.IRON_FENCE);	
+					}
 					clr3.setType(Material.IRON_FENCE);
-					clr6.setType(Material.IRON_FENCE);
 					clr4.setType(Material.IRON_FENCE);
-					clr5.setType(Material.IRON_FENCE);			
-					clr7.setType(Material.IRON_FENCE);
-					clr7.setType(Material.IRON_FENCE);				
+					clr5.setType(Material.IRON_FENCE);
+					clr6.setType(Material.IRON_FENCE);
+					clr7.setType(Material.IRON_FENCE);			
 					clr8.setType(Material.IRON_FENCE);	
 					clr9.setType(Material.IRON_FENCE);
 					clr10.setType(Material.IRON_FENCE);				
@@ -139,9 +146,17 @@ public class hut {
 					clr12.setType(Material.IRON_FENCE);
 				}
 				if (x == 1) {
+					Byte data = (byte)(0x8);
 					clr1.setType(Material.WOODEN_DOOR);
-					clr2.setType(Material.WOODEN_DOOR);
+					clr2.setTypeIdAndData(64, data, true);
 				}
+
+				if (x == 3) {
+					clr1.setType(Material.BOOKSHELF);
+					Block book2 = clr1.getRelative(BlockFace.UP,  1);
+					book2.setType(Material.BOOKSHELF);
+				}
+				
 				if (x == 3 || x ==4) {
 					if (x==3){
 						byte direction = ( byte )( 0x0 );
@@ -152,13 +167,6 @@ public class hut {
 						flags = ( byte )( flags | 0x1 );
 						clr12.setTypeIdAndData( 26, flags, true );
 					}
-					
-
-				}
-				if (x == 3) {
-					clr1.setType(Material.BOOKSHELF);
-					Block book2 = clr1.getRelative(BlockFace.UP,  1);
-					book2.setType(Material.BOOKSHELF);
 				}
 				
 				//START CHEST CODE//
