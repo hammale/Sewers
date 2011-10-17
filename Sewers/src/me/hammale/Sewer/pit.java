@@ -8,7 +8,7 @@ import org.bukkit.block.BlockFace;
 
 public class pit {
 	
-	public int pit1(Block set, Material m, Block b, BlockFace bf){
+	public int pit1(Block set, Material m, BlockFace bf){
 		int x = 1;
 		int a = (int) (Math.random() * 30);
 		if (a < 12){
@@ -295,7 +295,7 @@ public class pit {
 		return a;
 	  }
 	
-	public int pit2(Block set, Material m, Block b, BlockFace bf){
+	public int pit2(Block set, Material m, BlockFace bf){
 		int x = 1;
 		int a = (int) (Math.random() * 30);
 		if (a < 12){
