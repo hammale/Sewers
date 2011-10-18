@@ -9,7 +9,7 @@ import org.bukkit.block.BlockFace;
 public class pit {
 	
 	public int pit1(Block set, Material m, BlockFace bf){
-		int x = 1;
+		int x = 2;
 		int a = (int) (Math.random() * 30);
 		if (a < 12){
 			a = 12;
@@ -165,8 +165,8 @@ public class pit {
 				Block set101 = set91.getRelative(BlockFace.NORTH, 1);
 				Block set111 = set101.getRelative(BlockFace.NORTH, 1);
 				Block set121 = set111.getRelative(BlockFace.NORTH, 1);
-				Block set1222 = set1.getRelative(BlockFace.SOUTH, 1);
-				Block set122 = set1222.getRelative(BlockFace.UP, 1);
+
+				//Block set122 = set1222.getRelative(BlockFace.UP, 1);
 				Byte ran11 = (byte) (Math.random() * 3);
 				Byte ran8 = (byte) (Math.random() * 3);
 				Byte ran9 = (byte) (Math.random() * 3);
@@ -191,8 +191,6 @@ public class pit {
 				set111.setData(ran111);
 				set121.setType(m);
 				set121.setData(ran121);
-				set122.setType(m);
-				set122.setData(ran1);
 				//
 				Block set13 = set121.getRelative(BlockFace.UP, 1);
 				Block set14 = set13.getRelative(BlockFace.UP, 1);
@@ -227,6 +225,10 @@ public class pit {
 				set20.setType(m);
 				set20.setData(ran20);
 				
+				Block set122 = set20.getRelative(BlockFace.SOUTH, 1);
+				set122.setType(m);
+				set122.setData(ran1);
+								
 				clr1.setType(Material.AIR);
 				clr10.setType(Material.AIR);
 				clr11.setType(Material.AIR);
