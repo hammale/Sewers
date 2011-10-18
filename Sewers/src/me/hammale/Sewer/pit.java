@@ -165,7 +165,8 @@ public class pit {
 				Block set101 = set91.getRelative(BlockFace.NORTH, 1);
 				Block set111 = set101.getRelative(BlockFace.NORTH, 1);
 				Block set121 = set111.getRelative(BlockFace.NORTH, 1);
-				Block set122 = set4111.getRelative(BlockFace.SOUTH, 1);
+				Block set1222 = set1.getRelative(BlockFace.SOUTH, 1);
+				Block set122 = set1222.getRelative(BlockFace.UP, 1);
 				Byte ran11 = (byte) (Math.random() * 3);
 				Byte ran8 = (byte) (Math.random() * 3);
 				Byte ran9 = (byte) (Math.random() * 3);
@@ -257,6 +258,13 @@ public class pit {
 				clr4111.setType(Material.AIR);
 				clr41111.setType(Material.AIR);
 				clr411111.setType(Material.AIR);
+				
+				int w = 1;
+				while (w < 8){
+					Block clearer = set122.getRelative(BlockFace.DOWN, w);
+					clearer.setType(Material.AIR);
+					w++;
+				}
 				
 				clr5.setType(Material.AIR);
 				clr50.setType(Material.AIR);
