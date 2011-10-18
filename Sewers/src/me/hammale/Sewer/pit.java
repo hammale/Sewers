@@ -157,14 +157,15 @@ public class pit {
 				set81.setData(ran61);
 				
 				//
-				Block set9 = set81.getRelative(BlockFace.SOUTH, 1);
-				Block set10 = set9.getRelative(BlockFace.SOUTH, 1);
-				Block set11 = set10.getRelative(BlockFace.SOUTH, 1);
-				Block set12 = set11.getRelative(BlockFace.SOUTH, 1);
-				Block set91 = set12.getRelative(BlockFace.SOUTH, 1);
-				Block set101 = set91.getRelative(BlockFace.SOUTH, 1);
-				Block set111 = set101.getRelative(BlockFace.SOUTH, 1);
-				Block set121 = set111.getRelative(BlockFace.SOUTH, 1);
+				Block set9 = set81.getRelative(BlockFace.NORTH, 1);
+				Block set10 = set9.getRelative(BlockFace.NORTH, 1);
+				Block set11 = set10.getRelative(BlockFace.NORTH, 1);
+				Block set12 = set11.getRelative(BlockFace.NORTH, 1);
+				Block set91 = set12.getRelative(BlockFace.NORTH, 1);
+				Block set101 = set91.getRelative(BlockFace.NORTH, 1);
+				Block set111 = set101.getRelative(BlockFace.NORTH, 1);
+				Block set121 = set111.getRelative(BlockFace.NORTH, 1);
+				Block set122 = set4111.getRelative(BlockFace.SOUTH, 1);
 				Byte ran11 = (byte) (Math.random() * 3);
 				Byte ran8 = (byte) (Math.random() * 3);
 				Byte ran9 = (byte) (Math.random() * 3);
@@ -189,6 +190,8 @@ public class pit {
 				set111.setData(ran111);
 				set121.setType(m);
 				set121.setData(ran121);
+				set122.setType(m);
+				set122.setData(ran1);
 				//
 				Block set13 = set121.getRelative(BlockFace.UP, 1);
 				Block set14 = set13.getRelative(BlockFace.UP, 1);
