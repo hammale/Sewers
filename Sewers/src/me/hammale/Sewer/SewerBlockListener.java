@@ -28,9 +28,8 @@ public class SewerBlockListener extends BlockListener {
 		b.setType(Material.AIR);
 		Material m = (Material.SMOOTH_BRICK);
 		BlockFace bf = BlockFace.SOUTH;
-		Block set2 = b.getRelative(BlockFace.SOUTH, 2);
+		Block set2 = b;
 		com1(set2, m, bf, p);
-		
 	  }
 	}
 

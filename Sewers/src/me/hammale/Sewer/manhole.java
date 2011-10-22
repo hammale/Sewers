@@ -10,15 +10,18 @@ public class manhole {
 	
 	public int man1(Block set, Material m, BlockFace bf){
 		int x = 1;
-		int a = (int) (Math.random() * 30);
+		int a = (int) (Math.random() * 20);
 		if (a < 12){
 			a = 12;
 		}
-		BlockFace down = BlockFace.DOWN;
-		while (x < a) {
+		BlockFace up = BlockFace.UP;
+		Block setter = set.getRelative(BlockFace.UP, 1);
+		
+		while (setter.getType() != (Material.AIR)) {
 				int newx = x-1;
+				setter = set.getRelative(BlockFace.UP, x);
 				//START//
-				Block otherset = set.getRelative(down, newx);
+				Block otherset = set.getRelative(up, newx);
 				Block set1 = otherset.getRelative(BlockFace.NORTH, 1);
 				Block set2 = set1.getRelative(BlockFace.NORTH, 1);
 				Block set3 = set2.getRelative(BlockFace.WEST, 1);
@@ -27,8 +30,7 @@ public class manhole {
 				Block set6 = set5.getRelative(BlockFace.SOUTH, 1);
 				Block set8 = set6.getRelative(BlockFace.EAST, 1);
 				Block set9 = set8.getRelative(BlockFace.EAST, 1);
-				
-				
+								
 				Block clr1 = set1.getRelative(BlockFace.WEST, 1);
 								
 				clr1.setType(Material.AIR);
@@ -86,12 +88,14 @@ public class manhole {
 				set9.setType(m);
 				set9.setData(ran12);
 				
-				if (x == 1) {
+				Block setter2 = setter.getRelative(BlockFace.UP, 1);
+				
+				if (setter2.getType() == (Material.AIR)) {
 					clr1.setType(Material.IRON_FENCE);
 				} else {
-					byte flags = ( byte )8;
-					flags = ( byte )( flags | 0x4 );
-					clr1.setTypeIdAndData( 65, flags, true );
+					byte flags = ( byte )3;
+					clr1.setType(Material.LADDER);
+					clr1.setData(flags);
 				}
 				
 								
