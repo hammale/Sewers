@@ -36,41 +36,41 @@ public class SewerBlockListener extends BlockListener {
 	
 	public void com1(Block set, Material m, BlockFace bf, Player p){
 
-//		BlockFace bf0 = BlockFace.SOUTH;
-//		int sink1 = sink.sink1(b, m, b, bf0);
-//		BlockFace bf1 = BlockFace.NORTH;
-//		BlockFace bf2 = BlockFace.SOUTH;
-//		BlockFace bf3 = BlockFace.EAST;
-//		BlockFace bf4 = BlockFace.WEST;
-//		//5 BLOCKS TO MIDDLE!
-//		Block down = b.getRelative(BlockFace.DOWN, sink1);
-//		Block n = down.getRelative(BlockFace.SOUTH, 1);
-//		int t1 = tun.nstStraight(n, m, bf1);
-//		Block s = n.getRelative(BlockFace.SOUTH, 8);
-//		int t2 = tun.nstStraight(s, m, bf2);
-//	
-//		Block mid = n.getRelative(BlockFace.SOUTH, 4);		
-//		Block e = mid.getRelative(BlockFace.EAST, 4);
-//		int t3 = tun.ewtStraight(e, m, bf3);
-//		Block w = mid.getRelative(BlockFace.WEST, 4);
-//		
-//		int t4 = tun.ewtStraight(w, m, bf4);
-//		
-//		Block w1 = w.getRelative(BlockFace.WEST, t4-1);
-//		int t5 = tun.ewtStraight(w1, m, bf4);
-//		Block hut0 = w.getRelative(BlockFace.WEST, t4-7);
-//		Block hut1 = hut0.getRelative(BlockFace.NORTH, 2);
-//		int h1 = hut.hut1(hut1, m, bf1);
-//
-//		Block setter2 = w1.getRelative(BlockFace.WEST, t5+8);
-//		Block pit1 = setter2.getRelative(BlockFace.UP, 5);
-//		int pit01 = pit.pit1(pit1, m, bf3);
-//		
-//		Block setter1 = w1.getRelative(BlockFace.WEST, t5-5);
-//		Block w2 = setter1.getRelative(BlockFace.NORTH, 1);
-//		int t6 = tun.nstStraight(w2, m, bf1);
+		BlockFace bf0 = BlockFace.SOUTH;
+		int sink1 = sink.sink1(set, m, set, bf0);
+		BlockFace bf1 = BlockFace.NORTH;
+		BlockFace bf2 = BlockFace.SOUTH;
+		BlockFace bf3 = BlockFace.EAST;
+		BlockFace bf4 = BlockFace.WEST;
+		//5 BLOCKS TO MIDDLE!
+		Block down = set.getRelative(BlockFace.DOWN, sink1);
+		Block n = down.getRelative(BlockFace.SOUTH, 1);
+		int t1 = tun.nstStraight(n, m, bf1);
+		Block s = n.getRelative(BlockFace.SOUTH, 8);
+		int t2 = tun.nstStraight(s, m, bf2);
+	
+		Block mid = n.getRelative(BlockFace.SOUTH, 4);		
+		Block e = mid.getRelative(BlockFace.EAST, 4);
+		int t3 = tun.ewtStraight(e, m, bf3);
+		Block w = mid.getRelative(BlockFace.WEST, 4);
 		
-		man.man1(set, m , bf);
+		int t4 = tun.ewtStraight(w, m, bf4);
+		
+		Block w1 = w.getRelative(BlockFace.WEST, t4-1);
+		int t5 = tun.ewtStraight(w1, m, bf4);
+		Block hut0 = w.getRelative(BlockFace.WEST, t4-7);
+		Block hut1 = hut0.getRelative(BlockFace.NORTH, 2);
+		int h1 = hut.hut1(hut1, m, bf1);
+
+		Block setter2 = w1.getRelative(BlockFace.WEST, t5+8);
+		Block pit1 = setter2.getRelative(BlockFace.UP, 5);
+		int pit01 = pit.pit1(pit1, m, bf3);
+		
+		Block setter1 = w1.getRelative(BlockFace.WEST, t5-5);
+		Block w2 = setter1.getRelative(BlockFace.NORTH, 1);
+		int t6 = tun.nstStraight(w2, m, bf1);
+		
+//		man.man1(set, m , bf);
 		
 		
 

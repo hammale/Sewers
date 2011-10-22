@@ -8,6 +8,8 @@ import org.bukkit.block.BlockFace;
 
 public class manhole {
 	
+	int i = 1;
+	
 	public int man1(Block set, Material m, BlockFace bf){
 		int x = 1;
 		int a = (int) (Math.random() * 20);
@@ -16,7 +18,7 @@ public class manhole {
 		}
 		BlockFace up = BlockFace.UP;
 		Block setter = set.getRelative(BlockFace.UP, 1);
-		
+
 		while (setter.getType() != (Material.AIR)) {
 				int newx = x-1;
 				setter = set.getRelative(BlockFace.UP, x);
@@ -91,7 +93,17 @@ public class manhole {
 				Block setter2 = setter.getRelative(BlockFace.UP, 1);
 				
 				if (setter2.getType() == (Material.AIR)) {
+					
+					if (i == 2){
 					clr1.setType(Material.IRON_FENCE);
+					i = 1;
+					}else{
+						byte flags = ( byte )3;
+						clr1.setType(Material.LADDER);
+						clr1.setData(flags);
+						i++;
+					}
+					
 				} else {
 					byte flags = ( byte )3;
 					clr1.setType(Material.LADDER);
