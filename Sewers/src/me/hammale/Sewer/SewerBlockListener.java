@@ -68,13 +68,18 @@ public class SewerBlockListener extends BlockListener {
 		Block hut1 = hut0.getRelative(BlockFace.NORTH, 2);
 		int h1 = hut.hut1(hut1, m, bf1);
 
-		Block setter2 = w1.getRelative(BlockFace.WEST, t5+8);
+		Block setter0 = w1.getRelative(BlockFace.WEST, t5+8);
+		Block setter2 = setter0.getRelative(BlockFace.NORTH, 3);
 		Block pit1 = setter2.getRelative(BlockFace.UP, 5);
 		int pit01 = pit.pit1(pit1, m, bf3);
 		
 		Block setter1 = w1.getRelative(BlockFace.WEST, t5);
 		Block w2 = setter1.getRelative(BlockFace.NORTH, 1);
 		int t6 = tun.nstStraight(w2, m, bf1);
+		
+		Block setter3 = w2.getRelative(BlockFace.WEST, pit01-5);
+		Block w3 = setter3.getRelative(BlockFace.SOUTH, 3);
+		int t7 = tun.ewtStraight(w3, m, bf4);
 		
 //		man.man1(set, m , bf);
 		
