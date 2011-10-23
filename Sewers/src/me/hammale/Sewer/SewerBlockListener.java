@@ -36,12 +36,18 @@ public class SewerBlockListener extends BlockListener {
 	
 	public void com1(Block set, Material m, BlockFace bf, Player p){
 
-		BlockFace bf0 = BlockFace.SOUTH;
-		int sink1 = sink.sink1(set, m, set, bf0);
 		BlockFace bf1 = BlockFace.NORTH;
 		BlockFace bf2 = BlockFace.SOUTH;
 		BlockFace bf3 = BlockFace.EAST;
 		BlockFace bf4 = BlockFace.WEST;
+		
+		BlockFace bf0 = BlockFace.SOUTH;
+		int sink1 = sink.sink1(set, m, set, bf0);
+		
+		Block down2 = set.getRelative(BlockFace.DOWN, 7);
+		Block n2 = down2.getRelative(BlockFace.SOUTH, 1);
+		int t0 = tun.nstStraight(n2, m, bf1);
+		
 		//5 BLOCKS TO MIDDLE!
 		Block down = set.getRelative(BlockFace.DOWN, sink1);
 		Block n = down.getRelative(BlockFace.SOUTH, 1);
