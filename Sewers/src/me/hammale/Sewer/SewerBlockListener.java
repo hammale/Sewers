@@ -13,12 +13,13 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class SewerBlockListener extends BlockListener {
-
+	
 	private final Tunnel tun = new Tunnel();
 	private final pit pit = new pit();
 	private final hut hut = new hut();
 	private final SinkHole sink = new SinkHole();
 	private final manhole man = new manhole();
+	private final entrance ent = new entrance();
 	
 	public void onBlockPlace(BlockPlaceEvent e1)
 	{
@@ -30,9 +31,16 @@ public class SewerBlockListener extends BlockListener {
 		BlockFace bf = BlockFace.SOUTH;
 		Block set2 = b;
 		com1(set2, m, bf, p);
+		//ent(set2, m, bf, p);
 	  }
 	}
 
+	
+	public void ent(Block set, Material m, BlockFace bf, Player p){
+		
+		int test = ent.ent1(set, m, bf);
+		
+	}
 	
 	public void com1(Block set, Material m, BlockFace bf, Player p){
 
@@ -91,9 +99,9 @@ public class SewerBlockListener extends BlockListener {
 		//Block w3 = setter3.getRelative(BlockFace.SOUTH, 3);
 		int t8 = tun.ewtStraight(setter4, m, bf4);
 		
-		Block w5 = setter3.getRelative(BlockFace.WEST, t7);
-		Block w6 = w5.getRelative(BlockFace.NORTH, 2);
-		int t10 = tun.nstStraight(w6, m, bf1);
+		Block w5 = setter3.getRelative(BlockFace.WEST, t7-3);
+		Block w6 = w5.getRelative(BlockFace.SOUTH, 2);
+		int t10 = tun.nstStraight(w6, m, bf2);
 		
 		Block w3 = setter3.getRelative(BlockFace.WEST, t7+5);
 		Block w4 = w3.getRelative(BlockFace.SOUTH, 2);
@@ -119,6 +127,11 @@ public class SewerBlockListener extends BlockListener {
 		Block w10 = setter3.getRelative(BlockFace.WEST, t7+6);
 		Block w11 = w10.getRelative(BlockFace.NORTH, t9);
 		int t14 = tun.nstStraight(w11, m, bf1);
+		
+		Block en = w6.getRelative(BlockFace.SOUTH, t10+4);
+		Block en0 = en.getRelative(BlockFace.UP, 1);
+		Block en1 = en0.getRelative(BlockFace.EAST, 3);
+		int entr1 = ent.ent1(en1, m, bf1);
 		
 //		man.man1(set, m , bf);
 		
