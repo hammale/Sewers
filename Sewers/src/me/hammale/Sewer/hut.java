@@ -171,10 +171,55 @@ public class hut {
 				
 				//START CHEST CODE//
 				if (x == 4){
-					Material mat = Material.BREAD;
+					
+					
+					int i = 1;
+					int chestran = (int) (Math.random() * 12);
+								
+					while (i <= chestran){
+					int matran = (int) (Math.random() * 10);
+					Material mat = null;
+					if(matran == 0){
+						mat = Material.STONE_SWORD;
+					}
+					if(matran == 0){
+						mat = Material.CAKE;
+						}
+					if(matran == 1){
+						mat = Material.TNT;
+						}
+					if(matran == 2){
+						mat = Material.BOW;
+						}
+					if(matran == 3){
+						mat = Material.IRON_PICKAXE;
+						}
+					if(matran == 4){
+						mat = Material.CHAINMAIL_CHESTPLATE;
+						}
+					if(matran == 5){
+						mat = Material.ROTTEN_FLESH;
+						}
+					if(matran == 6){
+						mat = Material.ARROW;
+						}
+					if(matran == 7){
+						mat = Material.IRON_LEGGINGS;
+						}
+					if(matran == 8){
+						mat = Material.BOOK;
+						}
+					if(matran == 9){
+						mat = Material.BUCKET;
+						}
+					int amt = (int) (Math.random() * 10);
+	
 					clr1.setTypeId(54);
-					Chest chest = (Chest)clr1.getState();
-					chest.getInventory().addItem(new ItemStack[] { new ItemStack(mat, 5) });			
+					Chest chest = (Chest)clr1.getState();			
+					chest.getInventory().addItem(new ItemStack[] { new ItemStack(mat, amt) });
+					i++;
+					}
+					
 				}
 			    //END CHEST CODE//
 				
