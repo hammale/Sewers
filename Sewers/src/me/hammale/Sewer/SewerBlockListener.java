@@ -25,6 +25,7 @@ public class SewerBlockListener extends BlockListener {
 	{
 		Block b = e1.getBlock();
 		Player p = e1.getPlayer();
+		p.sendMessage("Generating Sewer...");
 		if (b.getType() == (Material.COAL_ORE)){
 		b.setType(Material.AIR);
 		Material m = (Material.SMOOTH_BRICK);
@@ -32,6 +33,7 @@ public class SewerBlockListener extends BlockListener {
 		Block set2 = b;
 		com1(set2, m, bf, p);
 		//ent(set2, m, bf, p);
+		p.sendMessage("Sewer Complete!");
 	  }
 	}
 
