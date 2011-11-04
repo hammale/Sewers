@@ -13,14 +13,14 @@ public class Sewer extends JavaPlugin {
 	
 	public void onEnable()
     {
-	    System.out.println("Sewer Enabled!" );
+	    System.out.println("Sewers Enabled!" );
 		registerEvents();
 		server = this.getServer();
 		plugin = this;
     }
 	public void onDisable()
     {
-		System.out.println("Sewer Disabled!");
+		System.out.println("Sewers Disabled!");
     }
 	private void registerEvents()
     {
