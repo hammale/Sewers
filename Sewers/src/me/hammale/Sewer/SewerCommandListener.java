@@ -1,20 +1,16 @@
 package me.hammale.Sewer;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.block.Chest;
-import org.bukkit.entity.CreatureType;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.block.BlockListener;
-import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.inventory.ItemStack;
 
-public class SewerBlockListener extends BlockListener {
-	
+public class SewerCommandListener implements CommandExecutor {
+    
 	private final Tunnel tun = new Tunnel();
 	private final pit pit = new pit();
 	private final hut hut = new hut();
@@ -22,28 +18,47 @@ public class SewerBlockListener extends BlockListener {
 	private final manhole man = new manhole();
 	private final entrance ent = new entrance();
 	
-	public void onBlockPlace(BlockPlaceEvent e1)
-	{
-		Block b = e1.getBlock();
-		Player p = e1.getPlayer();
-		if (b.getType() == (Material.COAL_ORE)){
-		p.sendMessage(ChatColor.GREEN + "Generating Sewer...");
-		b.setType(Material.AIR);
-		Material m = (Material.SMOOTH_BRICK);
-		BlockFace bf = BlockFace.SOUTH;
-		Block set2 = b;
-		com1(set2, m, bf, p);
-		//ent(set2, m, bf, p);
-		p.sendMessage(ChatColor.GREEN + "Sewer Complete!");
-	  }
+	private Sewer plugin;
+ 
+	public SewerCommandListener(Sewer plugin) {
+		this.plugin = plugin;
 	}
 
-	
-	public void ent(Block set, Material m, BlockFace bf, Player p){
+	@Override
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		
-		int test = ent.ent1(set, m, bf);
+		Player p = null;
+		if (sender instanceof Player) {
+			p = (Player) sender;
+		}
 		
+		if (command.getName().equalsIgnoreCase("sewer")) {
+			
+			if(args.length == 1){
+			String arg = args[0];
+			if(arg.equalsIgnoreCase("create")){
+			
+			if (p == null) {
+				sender.sendMessage("This Command Can Only Be Run By A Player!");
+			} else {
+
+				Block b = p.getLocation().getBlock();
+				p.sendMessage(ChatColor.GREEN + "Generating Sewer...");
+				b.setType(Material.AIR);
+				Material m = (Material.SMOOTH_BRICK);
+				BlockFace bf = BlockFace.SOUTH;
+				Block set2 = b;
+				com1(set2, m, bf, p);
+				//ent(set2, m, bf, p);
+				p.sendMessage(ChatColor.GREEN + "Sewer Complete!");
+										
+			return true;
 	}
+  }
+}
+	}
+		return false;
+}		
 	
 	public void com1(Block set, Material m, BlockFace bf, Player p){
 
@@ -199,4 +214,7 @@ public class SewerBlockListener extends BlockListener {
 		int t25 = tun.nstStraight(e11, m, bf1);
 		
 	}		
+	
 }
+
+

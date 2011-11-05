@@ -1,3 +1,7 @@
 name: Sewers
 main: me.hammale.Sewer.Sewer
 version: 1.0
+commands:
+  sewer:
+    description:
+    usage: |
