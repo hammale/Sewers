@@ -1,5 +1,6 @@
 package me.hammale.Sewer;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -25,15 +26,15 @@ public class SewerBlockListener extends BlockListener {
 	{
 		Block b = e1.getBlock();
 		Player p = e1.getPlayer();
-		p.sendMessage("Generating Sewer...");
 		if (b.getType() == (Material.COAL_ORE)){
+		p.sendMessage(ChatColor.GREEN + "Generating Sewer...");
 		b.setType(Material.AIR);
 		Material m = (Material.SMOOTH_BRICK);
 		BlockFace bf = BlockFace.SOUTH;
 		Block set2 = b;
 		com1(set2, m, bf, p);
 		//ent(set2, m, bf, p);
-		p.sendMessage("Sewer Complete!");
+		p.sendMessage(ChatColor.GREEN + "Sewer Complete!");
 	  }
 	}
 
@@ -146,12 +147,17 @@ public class SewerBlockListener extends BlockListener {
 		Block s2 = s1.getRelative(BlockFace.SOUTH, 2);
 		int t15 = tun.nstStraight(s2, m, bf2);
 		
+		Block s01 = s1.getRelative(BlockFace.EAST, t15-5);
+		Block s02 = s01.getRelative(BlockFace.SOUTH, 2);
+		int t015 = tun.nstStraight(s02, m, bf2);
+		
 		Block s3 = s2.getRelative(BlockFace.SOUTH, t15-6);
 		int t16 = tun.nstStraight(s3, m, bf2);
 
-		Block e2 = s3.getRelative(BlockFace.SOUTH, t16-12);
-		Block e3 = e2.getRelative(BlockFace.EAST, 2);
-		int t17 = tun.ewtStraight(e3, m, bf3);
+		Block en2 = e.getRelative(BlockFace.EAST, 12);
+		Block en3 = en2.getRelative(BlockFace.UP, 1);
+		Block en4 = en3.getRelative(BlockFace.SOUTH, 7);
+		int entr2 = ent.ent1(en4, m, bf2);
 		
 		Block s4 = s3.getRelative(BlockFace.SOUTH, t16-7);
 		Block s5 = s4.getRelative(BlockFace.WEST, 2);
@@ -161,11 +167,16 @@ public class SewerBlockListener extends BlockListener {
 		Block hut5 = hut4.getRelative(BlockFace.WEST, t19-6);
 		int h3 = hut.hut1(hut5, m, bf1);
 		
-//		Block e4 = e.getRelative(BlockFace.EAST, t3-6);
-//		int t18 = tun.nstStraight(e4, m, bf2);
-//		
-//		Block e5 = e.getRelative(BlockFace.EAST, t3-2);
-//		int t20 = tun.nstStraight(e5, m, bf2);
+		//||
+		//||
+		//\/
+		
+		Block e04 = e.getRelative(BlockFace.NORTH, 2);
+		Block e4 = e04.getRelative(BlockFace.EAST, t3-8);
+		int t18 = tun.nstStraight(e4, m, bf1);
+		
+		Block e5 = e.getRelative(BlockFace.EAST, t3-2);
+		int t20 = tun.nstStraight(e5, m, bf2);
 				
 		Block e6 = s4.getRelative(BlockFace.EAST, t19);
 		Block e7 = e6.getRelative(BlockFace.NORTH, 5);
@@ -183,6 +194,9 @@ public class SewerBlockListener extends BlockListener {
 		Block n4 = e9.getRelative(BlockFace.EAST, t23-5);
 		Block n5 = n4.getRelative(BlockFace.SOUTH, 2);
 		int t24 = tun.ewtStraight(n4, m, bf4);
+		
+		Block e11 = e4.getRelative(BlockFace.EAST, t18-2);
+		int t25 = tun.nstStraight(e11, m, bf1);
 		
 	}		
 }
