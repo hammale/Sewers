@@ -86,6 +86,8 @@ public class SewerCommandListener implements CommandExecutor {
 		int t3 = tun.ewtStraight(e, m, bf3);
 		Block w = mid.getRelative(BlockFace.WEST, 4);
 		
+		//*****START EAST*****//		
+		
 		int t4 = tun.ewtStraight(w, m, bf4);
 		
 		Block w1 = w.getRelative(BlockFace.WEST, t4-1);
@@ -258,7 +260,46 @@ public class SewerCommandListener implements CommandExecutor {
 		Block e21 = e20.getRelative(BlockFace.NORTH, t34-1);
 		int t35 = tun.ewtStraight(e21, m, bf4);	
 		
+		Block e24 = n9.getRelative(BlockFace.NORTH, t31-6);
+		Block e25 = e24.getRelative(BlockFace.EAST, 2);
+		int t39 = tun.ewtStraight(e25, m, bf3);
+		
 		//*****END NORTH START SOUTH*****//
+		
+		Block s6 = s.getRelative(BlockFace.SOUTH, t2-1);
+		int t36 = tun.nstStraight(s6, m, bf2);
+		
+		Block s7 = s.getRelative(BlockFace.SOUTH, t36-1);
+		int t37 = tun.nstStraight(s7, m, bf2);
+		
+		Block e22 = s7.getRelative(BlockFace.SOUTH, t37-5);
+		Block e23 = e22.getRelative(BlockFace.WEST, 2);
+		int t38 = tun.ewtStraight(e23, m, bf4);	
+				
+		Block hut11 = e23.getRelative(BlockFace.WEST, t38-8);
+		Block hut12 = hut11.getRelative(BlockFace.NORTH, 2);
+		int h6 = hut.hut1(hut12, m, bf1);
+		
+		Block e26 = s6.getRelative(BlockFace.SOUTH, t36-12);
+		Block e27 = e26.getRelative(BlockFace.EAST, 2);
+		int t40 = tun.ewtStraight(e27, m, bf3);	
+		
+		Block e28 = e26.getRelative(BlockFace.EAST, t40-4);
+		Block e29 = e28.getRelative(BlockFace.SOUTH, 2);
+		int t41 = tun.nstStraight(e29, m, bf2);
+		
+		Block ent8 = e29.getRelative(BlockFace.SOUTH, t41);
+		Block ent9 = ent8.getRelative(BlockFace.UP, 1);
+		Block ent10 = ent9.getRelative(BlockFace.EAST, 3);
+		int entr4 = ent.ent1(ent10, m, bf2);
+		
+		Block e30 = s6.getRelative(BlockFace.SOUTH, t36-6);
+		Block e31 = e30.getRelative(BlockFace.WEST, 2);
+		int t42 = tun.ewtStraight(e31, m, bf4);
+		
+		Block e32 = e30.getRelative(BlockFace.WEST, t42-4);
+		Block e33 = e32.getRelative(BlockFace.NORTH, 2);
+		int t43 = tun.nstStraight(e33, m, bf1);
 		
 	}		
 	
