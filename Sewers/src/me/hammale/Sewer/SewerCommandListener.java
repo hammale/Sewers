@@ -93,9 +93,7 @@ public class SewerCommandListener implements CommandExecutor {
 		Block hut0 = w.getRelative(BlockFace.WEST, t4-7);
 		Block hut1 = hut0.getRelative(BlockFace.NORTH, 2);
 		int h1 = hut.hut1(hut1, m, bf1);
-
-
-		
+	
 		Block setter0 = w1.getRelative(BlockFace.WEST, t5+8);
 		Block setter2 = setter0.getRelative(BlockFace.NORTH, 1);
 		Block pit1 = setter2.getRelative(BlockFace.UP, 5);
@@ -182,10 +180,6 @@ public class SewerCommandListener implements CommandExecutor {
 		Block hut5 = hut4.getRelative(BlockFace.WEST, t19-6);
 		int h3 = hut.hut1(hut5, m, bf1);
 		
-		//||
-		//||
-		//\/
-		
 		Block e04 = e.getRelative(BlockFace.NORTH, 2);
 		Block e4 = e04.getRelative(BlockFace.EAST, t3-8);
 		int t18 = tun.nstStraight(e4, m, bf1);
@@ -212,6 +206,59 @@ public class SewerCommandListener implements CommandExecutor {
 		
 		Block e11 = e4.getRelative(BlockFace.EAST, t18-2);
 		int t25 = tun.nstStraight(e11, m, bf1);
+		
+		//*****END EAST START NORTH*****//
+			
+		Block n6 = n.getRelative(BlockFace.NORTH, t1-1);
+		int t26 = tun.nstStraight(n6, m, bf1);
+		
+		Block e12 = n6.getRelative(BlockFace.NORTH, t26-8);
+		Block e13 = n6.getRelative(BlockFace.EAST, 2);
+		int t28 = tun.ewtStraight(e12, m, bf3);		
+		
+		Block n7 = n6.getRelative(BlockFace.NORTH, t26-1);
+		int t27 = tun.nstStraight(n7, m, bf);
+		
+		Block e14 = n6.getRelative(BlockFace.NORTH, t26-5);
+		Block e15 = e14.getRelative(BlockFace.WEST, 1);
+		int t29 = tun.ewtStraight(e15, m, bf4);
+		
+		Block n8 = e14.getRelative(BlockFace.WEST, t29-5);
+		Block n9 = n8.getRelative(BlockFace.NORTH, 2);
+		int t31 = tun.nstStraight(n9, m, bf1);	
+		
+		Block e16 = e14.getRelative(BlockFace.WEST, t29-1);
+		int t30 = tun.ewtStraight(e16, m, bf4);
+		
+		Block hut9 = e16.getRelative(BlockFace.WEST, t30-6);
+		Block hut10 = hut9.getRelative(BlockFace.SOUTH, 2);
+		int h5 = hut.hut1(hut10, m, bf2);
+		
+		Block n10 = n9.getRelative(BlockFace.NORTH, t31-1);
+		int t32 = tun.nstStraight(n10, m, bf1);
+		
+		Block setter7 = n10.getRelative(BlockFace.NORTH, t32);
+		Block setter8 = setter7.getRelative(BlockFace.WEST, 3);
+		Block pit4 = setter8.getRelative(BlockFace.UP, 5);
+		int p4 = pit.pit2(pit4, m, bf3);
+				
+		Block e17 = n6.getRelative(BlockFace.NORTH, t26-8);
+		Block e18 = e17.getRelative(BlockFace.EAST, 2);
+		int t33 = tun.ewtStraight(e18, m, bf3);	
+				
+		Block ent5 = e17.getRelative(BlockFace.EAST, t33);
+		Block ent6 = ent5.getRelative(BlockFace.UP, 1);
+		Block ent7 = ent6.getRelative(BlockFace.SOUTH, 7);
+		int entr3 = ent.ent1(ent7, m, bf2);
+		
+		Block e19 = n9.getRelative(BlockFace.NORTH, t31-2);
+		Block e20 = e19.getRelative(BlockFace.WEST, 2);
+		int t34 = tun.ewtStraight(e20, m, bf4);	
+		
+		Block e21 = e20.getRelative(BlockFace.NORTH, t34-1);
+		int t35 = tun.ewtStraight(e21, m, bf4);	
+		
+		//*****END NORTH START SOUTH*****//
 		
 	}		
 	
